@@ -1,0 +1,8 @@
+{
+    "cmake.sourceDirectory": "/tmp/flutter_plugin_1/example/linux",
+    "cmake.buildDirectory": "${workspaceFolder}/example/build/linux/x64/debug",
+    "cmake.configureOnEdit": false,
+    "cmake.configureOnOpen": false,
+    "cmake.automaticReconfigure": false,
+    "cmake.exportCompileCommandsFile": true,
+}
