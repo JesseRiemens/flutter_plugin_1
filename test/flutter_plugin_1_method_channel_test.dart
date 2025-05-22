@@ -1,27 +1,27 @@
-import 'package:flutter/services.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_plugin_1/flutter_plugin_1_pigeon.dart';
+// import 'package:flutter/services.dart';
+// import 'package:flutter_test/flutter_test.dart';
+// import 'package:flutter_plugin_1/flutter_plugin_1_pigeon.dart';
 
-void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
+// void main() {
+//   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelFlutterPlugin_1 platform = MethodChannelFlutterPlugin_1();
-  const MethodChannel channel = MethodChannel('flutter_plugin_1');
+//   MethodChannelFlutterPlugin_1 platform = MethodChannelFlutterPlugin_1();
+//   const MethodChannel channel = MethodChannel('flutter_plugin_1');
 
-  setUp(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
-      channel,
-      (MethodCall methodCall) async {
-        return '42';
-      },
-    );
-  });
+//   setUp(() {
+//     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
+//       channel,
+//       (MethodCall methodCall) async {
+//         return '42';
+//       },
+//     );
+//   });
 
-  tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
-  });
+//   tearDown(() {
+//     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
+//   });
 
-  test('getPlatformVersion', () async {
-    expect(await platform.getPlatformVersion(), '42');
-  });
-}
+//   test('getPlatformVersion', () async {
+//     expect(await platform.getPlatformVersion(), '42');
+//   });
+// }

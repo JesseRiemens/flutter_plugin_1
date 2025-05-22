@@ -2,6 +2,7 @@
 
 #include "messages.g.h"
 
+#include <cstdio>
 #include <flutter_linux/flutter_linux.h>
 #include <glib-object.h>
 #include <gtk/gtk.h>
@@ -33,8 +34,8 @@ flutter_plugin_1_plugin_handle_do_thing(int64_t my_number, gpointer user_data) {
   g_autoptr(FlutterPlugin1MyClass) myClassPtr =
       flutter_plugin1_my_class_new(myVec.data(), myVec.size());
 
-  g_autoptr(FlValue) my_class_fl = fl_value_new_custom_object_take(
-      flutter_plugin1_my_class_get_type(), G_OBJECT(myClassPtr));
+  g_autoptr(FlValue) my_class_fl =
+      fl_value_new_custom_object(129, G_OBJECT(myClassPtr));
   fl_value_append(my_class_list, my_class_fl);
 
   return flutter_plugin1_my_host_api_do_thing_response_new(my_class_list);

@@ -5,7 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_plugin_1/flutter_plugin_1.dart';
 
 void main() {
-  runApp(const MyApp());
+  print('main');
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
